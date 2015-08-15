@@ -1,0 +1,5 @@
+1. If an arithmetic operator have a floating-point and an Integer operand, then the Integer will be converted to floating-point before the operation 	is done.
+2. Actually the printf and scanf, other input or output included, is not defined by C programming Language. It's only the standard libary.
+3. You can use the %% in the printf method to show the % in a string. You can't use the '\', or "'" to print the '%'.
+4. Even you use the float type to receive the value of a expression or formula, you should keep care of making the essential integer value float one.
+5. 
