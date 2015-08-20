@@ -2,4 +2,33 @@
 2. Actually the printf and scanf, other input or output included, is not defined by C programming Language. It's only the standard libary.
 3. You can use the %% in the printf method to show the % in a string. You can't use the '\', or "'" to print the '%'.
 4. Even you use the float type to receive the value of a expression or formula, you should keep care of making the essential integer value float one.
-5. 
+5. The choice of the for-loop and the while-loop is arbitrary, based on while is clearer.
+6. You should use the symbolic constants to define the "magic numbers" which is not quite clear for the reader. You should define the symbolic     	constants in upper case.
+7. Calls the putchar and printf may be interleave.( You should keep more care of this tips.)	
+	this probably because the c standard lib do not support the getch() which is in conio.h 
+8. When you receive a char from the command line, you should use the int type to receive the data not a char because the user inputs may be beyond 	the range of char value(-128 ~ 128);
+9. EOF is an integer defined in the stdio.h, but the specific numberic value is not matter as long as it's not the same as any char value.
+	The Value of EOF is -1, why? getchar return -1 if the input is not a char value.
+10. You should keep good habit with centralize the code.
+11. Keep care of using = and ==
+12. A character writter between single quotes is a character constant.
+13. The standard library ensures that an input text stream appears as a sequence of lines, each terminated by a newline.
+14. You should try to make your program more readable.
+15. The switch statement is suitable when the condition is whether some integers and characters expression match one of a set of constants.
+16. You can't use the sizeof() to get the length of the array. sizeof() is used to get the size of the memory.
+17. Chater one contains an important lib for drawing the histogram, you can build it into a library and you can reuse it when needed.
+18. In C programs, you can have a diffrent declaration from the achievement.
+19. Find the diffences between the params and the arguments.
+20. It's an error if any use of the function or the defination of the function do not agree with it's prototype.parameter names need not agree.
+	indeed parameter names are optional in a function prototype.
+21. In C, all function argument is passed by "value".
+22. When the array passed to the function as an argument, the value is the location or address of the beginning of the array.
+23. Integer is the default return type.You can ignore it. You will get an warning when ignore the return type.
+24. In C program, the string array is terminated by the '\0'.
+25. Thinking why it should move to new line when I type enter, the '\n' are still in the input stream.
+26. The external variable must be defined, exactly once, outside of any function.The variable must alse be declared in each function that wants to 	access it.
+27. Before a function can use the external varible, the name of the variable must be known to the function, using extern keyword.
+28. If the defination of an external varaible occures in the source file before its use in a particular function, then there is no need for an extern 		declaration in the function.
+29. If the program is in several source files, and a variable is defined in file1 and used in file2 and file3, then extern declarations are needed in 		file2 and file3 to connect the occurrences of the variable.
+30. Be care of the defination and declaration when using extern keyword in C programming.
+	
