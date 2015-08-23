@@ -1,0 +1,64 @@
+Variables Types	Operator Expression
+
+Introduction
+	
+	Fundamental details in C
+
+Tips: 
+
+1. Do not start a veriable name with underscore. since library routines often use such names.
+2. At least the first 31 character of internal name is significant. For function and external variables, the number may be less than 31, because the 
+	external names may be used by assembler and loaders. For external names, the standard guarantees uniqueness only 6 character and a single case
+3. Basic types are: char int float double. short and long are qualifiers to int. the restriction only indicate the int and short is at least 16it, 
+	long is at least 32bits.
+4. the default size of each type is defined in limits.h and float.h. you can use gcc -H -c source.c to find the source file or use locate source.c.
+5. use the %Le/g/E/G to print the long dEnouble type in gcc. the long.
+6. an long integer with a suffix l or L, an unsigned integer with a suffix u, ul for unsigned long.
+7. floating-point constants 123.4 is a double type, unless suffix, you can use f for floating, l or L for long double.
+8. octal and hexadecimal constants may also be followed by L to make them long and U to make them unsigned. 0xFUL is an unsigned long hex constants 
+	15.
+9. The string is ended with the '\0'.
+10. Be careful of the 'x' and "x".
+11. Names in different enumeration must be distinct. Values need not be distinct in the same enumeration.
+12. External and static variables are initialized to zero by default.
+13. use const qualifier to declarate the variable to specify the value is not be changed. for an array, the element is not be changed.
+	you can use the pointer to reverse the data from the stack, but you can't reverse the global const variable.
+14. The const declaration can be used with array arguments, to indicate that the function do not change the array.
+15. The precedence of != is higher than assignment.
+16. By definition, the numberic value of a relational or logical expression is 1 if the relation is true, and 0 if the relation is false.
+17. the only automatic convertion are those than convert a narrower operand into a wider one without losing information, such as convert an integer
+	into float.
+18. A char is a small integer, so chars can used in arithmetic expression.
+19. why there should be a error when using char *str = "hello".
+	i think i know that because the string constants is allocated memory in static memory area, so the char *str = "hello", do not work, because 
+    the "hello" hasn't be allocated, so it do not have a point to get. char str[] = "hello", will get the hello in stack and static area.
+20. You can use the build in function tolower() and isdigit() in ctype.h. notice that the tolower() is independent of the character set.
+21. on some machine convert a signed char to integer may cause the negetive value.
+22. c just guarantees that any printing character set will never be negative.
+23  relational operator just have higher precedence than assignment.
+24. Notice the float in an expression will not automatic convert to double. the functions in math.h alway use double precisison.
+25. as for unsigned, first make the storage wider, then conver the value, finally compare them.
+	the following is true:
+		-1L < 1U
+		-1L > lUL
+26. conversions take place across assignments.
+27. Longer integers are converted to shorter ones or to chars by dropping the excess high-order bits.
+28. In the absense of a function phototype, char and short become int, and float becomes double.
+29. ++/-- operator may be used either as prefix operator or postfix operator.
+30. the prefix use of ++/-- will add/dec the value first when it is used.nevertheless for postfix use.
+31. the increase and decrease operator can only be used to a variable. can't be used to a expression.
+32. the bitwise and is often to mask off, but or is to turn bit on.
+33. shift left will fill the right with zero, shift right for unsigned quantity will using zero to fill, but for signed quantity using zero or sign
+	bit depend on machine.
+34. keep care of ~0 is all 1-bit.
+35. if the variable repeated immediately on the right, can be written in the compressed form x op= operand.
+36. expr1 op= expr2 is equivalent to expr1 = (expr1) op (expr2).
+37. declaring the argument x to be unsigned ensures that when it is right-shifted, vacated bits will be filled with zero, not sign bit.
+38. c, like most languages, donot specify the order in which the operands of an operator are evaluated.
+39. similarly, the order in which function arguments are evaluated is not specified.
+40. the standard does specify that all side effects on arguments take effect before a function is called, but that would not help in the the call to printf above.
+41. so do not write code depend on order of evaluation.
+
+
+
+
