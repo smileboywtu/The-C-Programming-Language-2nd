@@ -1,0 +1,22 @@
+ Chapter 3
+
+1. variable can be declared inside any block.
+2. the else is associated with the cloest previous else-less if.
+3. you should avoid using more test in the loop because it will cause long time delay.
+4. the break statement cause an immediately exit from the switch.
+5. break and return are the most comment ways to leave a switch.
+6. a break is used to exit from any loops.
+7. as a matter of good form, put a break statement at the end of last case.
+8. keep care if using switch, it will automatic falling through, but the label is never the same, so you can not using them to do command step by step
+9. if the test expression in for-loop is not present, it's taken as permanently true.
+10. operator comma ',' is often used in the for statement, a pair of expressions seperated by a comma is evaluated left to right. and the type and 
+	value of the result are the type and value of the right operand.
+11. the comma that seperate function arguments, variables in declarations, etc, are not comma operators, and do not guarantee left to right, 
+	evaluation.
+12. you should know more about the isalpha function in ctype.h, this test the letter.
+13. the do-while loop tests at the bottom after each pass through the loop body. the loop body is alway executed at least once.
+14. an intresting thing, you can never use the -n to make the largest negative number positive.(exercise-3-4)
+15. the continue statement only apply to loops not switch.
+16. the break statement only breaks from the inner most loop.
+17. here you can use goto to jump out serveral loops.
+18. go to should be used rarely, if at all.
