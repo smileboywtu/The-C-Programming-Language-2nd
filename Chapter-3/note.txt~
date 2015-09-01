@@ -20,3 +20,15 @@
 16. the break statement only breaks from the inner most loop.
 17. here you can use goto to jump out serveral loops.
 18. go to should be used rarely, if at all.
+19. if the function is defined and declared inconsistently in the same source file, the error would be detected, but if not in the same source file, 
+	the error would not be detected.
+20. if the function take no arguments, use void.
+21. if the function has no prototype, a function is explicitly declared by its first appearance in an expression.
+22. here if you do not need to using the function every where, you can just declare a function inside another function.
+23. external varaibles are defined outside of any function, thus available for many functions.
+24. function themselves are always external.
+25. if a function has many arguments, you'd batter use external variables.
+26. remember that do not write code rely on the order.
+27. The e format is used only when the exponent of the value is less than –4 or greater than or equal to the precision argument.
+28. %g will choose exponent notation or fixed point automatically.
+29. when you write the makefile you should keep care of write the souce file sequence.you should often arrage them properly.

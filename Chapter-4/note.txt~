@@ -1,0 +1,52 @@
+Chapter 4
+
+1. there be only one defination of each eternal objects.
+2. automatic arrays and structures may now be initialized, this is only for external variables.
+3. if the performance is not so bad, you should alway choose a macro and function to bury the details.
+4. parentheses are often used around the expression, but they are optional.
+5. the value return by main is available for use by the environment that called from the program.
+6. when you use the math library you should use the -lm as the last flag to compile the source files.
+7. for the automatic variables the scope is the function in which the variable defined.
+8. the params of the function in effect are local variables.
+9. the function may use the external variables but the variable names are not visiable to them.
+10. if you use the external variable before it's defined you have to use the extern keyword to declare them.
+11. see the below example clearly:
+	Globals:
+		int sp;
+		double var[40];		// the sp and var is defined global variables
+	when you  need to use the sp and var before it defined, you have to declare them to be external.
+		extern int sp;
+		extern double var;
+	this totally explains the declaration and defination, defination will declare and cause storage to be set aside. 
+12. array size must be specified with the defination, but are optional with the external declaration.
+13. initialization of external variables only go with the defination.\
+14. because the global variables name is not visiable to the local function, so the local function can have the same variable names, and then local
+	variables will shadow the global variable.
+15. up to some moderate program size, it's probably best to have only one header file that contains everything that is to be shared between any two 		parts of the program.
+16. the static limit the external variables and functions scope to the rest of the souce file.
+17. if a function is declared static, however its name is invisiable outside of the file in which it is declared.\
+18. the static declaration can also be applied to the interval variables. the scope of the static local variables are like automatic variables, but 
+	unlike automatic variable, they remain existence rather than coming and going each time the function is activated.
+19. the static variables provide  private, permanent storage within a single function.
+20. the idea that register variables are to be placed in machine registers. 
+21. the register declaration can only be applied to automatic variables and to the formal parameters of a function.
+22. only few and certain type are allowed to place in registers.
+23. the automatic variable declared and initialized in a block is initialized each time the block is entered. A static variable is initialized only 
+	the first tiem the block is entered.
+24. automatic variables and formal parameters will hidden the external variables.
+25. extern and static variables are guranteed to be initialized to zero. automatic and register variables have undefined initial value.
+26. in effect, initialize automatic and register variables are just shorthand for assignment statements.
+27. if there are fewer initializer for an array than the number specified, the missing will be set to zero for external, automatic, static variables.
+28. keep care of the array size and string len, arraysize of alway 1 more larger than strlen because of terminating with '\0'.
+29. recursive code is much easier to write and understand than non-recursive equivalent.but it will use more storage and slower.
+30. watch out the #include "" and #include <>.
+31. when an include file is changed, all files that depend on it must be recompiled.
+32. the scope of a name defined with #define begins at the point of defination to the end of the source file being compiled.
+33. substitution are made only for tokens, and do not take place within quoted string.
+34. any name name may be defined with any replacement text.
+35. so long as the argument are treated consistently, this macro will serve for any data type.
+36. however, a parameter name is proceded by a # in the replacement text, the combination will be expanded into a quote string with the parameter
+	replaced by the actual argument.
+37. using the conditional inclusion to include code selectively.
+38. #if #elif #else #if defined()
+39. #ifndef #ifdef test the name defined
